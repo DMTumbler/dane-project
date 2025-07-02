@@ -34,26 +34,19 @@
     text-shadow: 0 0 0px currentColor; /* No shadow */
   }
   25% {
-    /* Slight upward shift and subtle skew */
     transform: translateY(-1px) skewX(0.5deg);
-    /* Magenta ghosting effect */
     text-shadow: 1px 1px 2px rgba(255, 0, 255, 0.7);
   }
   50% {
-    /* Return to center with opposite subtle skew */
     transform: translateY(0px) skewX(-0.5deg);
-    /* Cyan ghosting effect */
     text-shadow: -1px -1px 2px rgba(0, 255, 255, 0.7);
   }
   75% {
-    /* Slight downward shift and minor skew */
     transform: translateY(1px) skewX(0.2deg);
-    /* Subtle white glow */
     text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.4);
   }
 }
 
-/* Class to apply the animation */
 .animate-old-school-wave {
   animation: oldSchoolWave 3s infinite alternate ease-in-out;
 }
