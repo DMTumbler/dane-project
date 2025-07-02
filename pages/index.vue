@@ -10,7 +10,7 @@ name: "index",
 
 <template>
   <body>
-  <NuxtLink to="/TestFile">This is a nuxt link</NuxtLink>
+
   </body>
 
 </template>
