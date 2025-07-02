@@ -2,13 +2,13 @@
 import {defineComponent} from 'vue'
 
 export default defineComponent({
-name: "index",
+  name: "spicy-galley"
 })
 </script>
 
 <template>
   <div>
-    <p>This is the index</p>
+    <p>Spicy!</p>
   </div>
 </template>
 

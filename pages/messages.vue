@@ -7,7 +7,9 @@ export default defineComponent({
 </script>
 
 <template>
-<p>This is a message</p>
+  <div>
+    <p>This is a message</p>
+  </div>
 </template>
 
 <style scoped>

@@ -2,28 +2,41 @@
   <header>
     <nav class="flex flex-col p-4">
       <h1 class="ml-auto text-4xl new-rocker-regular animate-old-school-wave">Daneyshalee Vargas Matojo Oquendo!</h1>
-      <ul class="mt-4 flex gap-4 text-3xl m-auto new-rocker-regular">
-        <li class="purple-shadow">
-          <NuxtLink to="/">Home</NuxtLink>
-        </li>
-        <li class="purple-shadow">
-          <NuxtLink to="messages">Pretty Messages</NuxtLink>
-        </li>
-        <li class="purple-shadow">
-          <NuxtLink to="/">Stuff?</NuxtLink>
-        </li>
-        <li class="purple-shadow">
-          <NuxtLink to="/">Other Stuff</NuxtLink>
-        </li>
-        <li class="purple-shadow">
-          <NuxtLink to="/">Yet more Stuff</NuxtLink>
-        </li>
-      </ul>
+      <div class="relative m-auto">
+        <img
+            src="~/assets/images/kirby.png"
+            alt="A happy Kirby"
+            class="absolute z-[-1] w-35 top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 -rotate-12 opacity-80"
+        />
+
+        <ul class="mt-4 flex gap-4 text-3xl m-auto new-rocker-regular">
+          <li class="purple-shadow">
+            <NuxtLink to="/">Home</NuxtLink>
+          </li>
+          <li class="purple-shadow">
+            <NuxtLink to="messages">Pretty Messages</NuxtLink>
+          </li>
+          <li class="purple-shadow">
+            <NuxtLink to="spicy-gallery">Spicy Gallery</NuxtLink>
+          </li>
+          <li class="purple-shadow">
+            <NuxtLink to="/">Other Stuff</NuxtLink>
+          </li>
+          <li class="purple-shadow">
+            <NuxtLink to="/">Yet more Stuff</NuxtLink>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
   <body class="bg-pink-300">
   <main>
-    <div class="grid grid-cols-3">
+    <div class="relative grid grid-cols-3">
+      <img
+          src="~/assets/images/jigglypuff.png"
+          alt="A happy Jigglypuff"
+          class="absolute w-52 top-4/4 right-0 -translate-x-1/2 "
+      />
       <section id="left-sidebar" class="text-center mt-9">
         <p>Test</p>
       </section>
@@ -31,23 +44,32 @@
         <NuxtPage/>
       </section>
       <section id="right-sidebar" class="mt-9">
-        <div @click="togglePastSelf">
+        <div @click="togglePastSelf" class="z-0 relative">
           <audio ref="pastSelfPlayer" src="/past-self.opus" preload="auto" loop></audio>
-          <div class="text-center pixelated-disc" v-bind:class="{'pixelated-spinning-disc' : pastSelfSpinning }">
+          <div class="text-center pixelated-disc relative"
+               v-bind:class="{'pixelated-spinning-disc' : pastSelfSpinning }">
+            <img
+                src="~/assets/images/snorlax.png"
+                alt="A happy snorlax"
+                class="z-[-1] absolute w-96 -top-1/7 left-3.5 rotate-370"
+            />
           </div>
-          <p class="text-center new-rocker-regular text-2xl">Past Self</p>
         </div>
         <div @click="toggleEmergence">
           <audio ref="emergencePlayer" src="/emergence.opus" preload="auto" loop></audio>
           <div class="text-center pixelated-disc" v-bind:class="{'pixelated-spinning-disc' : emergenceSpinning }">
           </div>
-          <p class="text-center new-rocker-regular text-2xl">Emergence</p>
         </div>
-        <div @click="toggleDamocles">
+        <div @click="toggleDamocles" class="z-0 relative">
           <audio ref="damoclesPlayer" src="/damocles.opus" preload="auto" loop></audio>
-          <div class="text-center pixelated-disc" v-bind:class="{'pixelated-spinning-disc' : damoclesSpinning }">
+          <div class="text-center pixelated-disc relative"
+               v-bind:class="{'pixelated-spinning-disc' : damoclesSpinning }">
+            <img
+                src="~/assets/images/charmander.png"
+                alt="A happy Kirby"
+                class="z-[-1] absolute w-50 -top-2/4 left-3.5 rotate-350"
+            />
           </div>
-          <p class="text-center new-rocker-regular text-2xl">Damocles</p>
         </div>
       </section>
     </div>
