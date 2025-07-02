@@ -27,7 +27,7 @@
   font-weight: 400;
   font-style: normal;
 }
-.
+
 @keyframes oldSchoolWave {
   0%, 100% {
     transform: translateY(0px) skewX(0deg);
