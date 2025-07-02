@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
-@import "../../node_modules/tailwindcss/dist/lib.d.mts";
-
 
 .new-rocker-regular {
     font-family: "New Rocker", system-ui;
