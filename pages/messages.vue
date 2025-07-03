@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent, ref, computed } from 'vue'
+import {defineComponent, ref, computed} from 'vue'
 
 interface Message {
   id: number
@@ -57,6 +57,31 @@ Love you forever.
       },
       {
         id: 3,
+        subject: "Bebesiiiita",
+        content: `Mi bestie, mi wifey, my besties wifey, my sexy milf. I'm so happy to be by your side. I feel proud to call you my friend. I love your free spirit, your crazy fun personality, and that pure and noble heart you have. Thank you for giving me unconditional love, accepting me for my traumatized self and never giving up on me.
+
+You are my lighthouse, my weedy bestie, my emo-bangs-on-the-side-blue-dress-for-prom-bestie. May we continue sharing funny, fun, deep (if you know what I mean 👀) moments and experiences and continue creating memorable stories in these long chapters we call life.
+
+May our inner theater kid continue dancing to the beat of life.`,
+        author: "La bebesota",
+        date: "July 3, 2025"
+      },
+      {
+        id: 4,
+        subject: "Dane!! 😤",
+        content: "Sabes que lo que necesites siempre estaremos aquí para ayudaro acompañar. Very appreciative of your friendship and all the work you've put into getting me to open up 🫶 sorry que soy medio pendejo jeje",
+        author: "Dune Lover",
+        date: "July 3, 2025"
+      },
+      {
+        id: 6,
+        subject: "💘💘",
+        content: "Felicidades Dane!! Que este nuevo año este lleno de bendiciones y mucho amor ❤",
+        author: "Pink n' Slim",
+        date: "July 3, 2025"
+      },
+      {
+        id: 7,
         subject: "Za Warudo",
         content: `Friendship is hard, yo. Call me cranky, old or whatever. Meeting people, growing your social circle; that sounds like a long hike through muddy trenches for me. That's why, when I met Vlad, was like "This is good. I have enough people. No more people". That was until I met you.
 
@@ -117,14 +142,15 @@ Love you forever.
   <div class="messages-container">
     <div class="message-display">
       <!-- Navigation arrows -->
-      <button 
-        @click="goToPreviousMessage"
-        :disabled="isFirstMessage"
-        class="nav-arrow left-arrow"
-        :class="{ 'disabled': isFirstMessage }"
+      <button
+          @click="goToPreviousMessage"
+          :disabled="isFirstMessage"
+          class="nav-arrow left-arrow"
+          :class="{ 'disabled': isFirstMessage }"
       >
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round"/>
         </svg>
       </button>
 
@@ -153,27 +179,28 @@ Love you forever.
         </div>
       </div>
 
-      <button 
-        @click="goToNextMessage"
-        :disabled="isLastMessage"
-        class="nav-arrow right-arrow"
-        :class="{ 'disabled': isLastMessage }"
+      <button
+          @click="goToNextMessage"
+          :disabled="isLastMessage"
+          class="nav-arrow right-arrow"
+          :class="{ 'disabled': isLastMessage }"
       >
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round"/>
         </svg>
       </button>
     </div>
 
     <!-- Message indicators -->
     <div class="message-indicators">
-      <button 
-        v-for="(message, index) in messages"
-        :key="message.id"
-        @click="currentMessageIndex = index"
-        class="indicator"
-        :class="{ 'active': index === currentMessageIndex }"
-        :title="message.subject || `Message ${index + 1}`"
+      <button
+          v-for="(message, index) in messages"
+          :key="message.id"
+          @click="currentMessageIndex = index"
+          class="indicator"
+          :class="{ 'active': index === currentMessageIndex }"
+          :title="message.subject || `Message ${index + 1}`"
       >
       </button>
     </div>
