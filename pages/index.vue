@@ -17,7 +17,7 @@ export default defineComponent({
       things, writing, and hats for some fucking reason". Well, hats wasn't going to happen. It turns out there's only
       one witch in the group and I've already crafted the perfect hat for her. I struggled for a bit on WHAT to make.
       What could represent Dane? What could be joyful, exuberant, intense, fun, humorous, feminine, and dark all at
-      once? For some fucking reason my immediate thought was "A perler Jigglypuff!". Yes, before this I considered a
+      once? For some fucking reason my immediate thought was <b>"A perler Jigglypuff!"</b>. Yes, before this I considered a
       children's craft... don't judge.</p>
 
     <img src="/assets/images/perler.png" class="mx-auto w-1/2 rounded-xl m-4" alt="perler jiggly">
