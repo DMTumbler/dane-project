@@ -14,7 +14,7 @@ export default defineComponent({
   name: "messages",
   setup() {
     const currentMessageIndex = ref(0)
-    
+
     // Collection of heartfelt messages/letters from friends
     const messages = ref<Message[]>([
       {
@@ -182,9 +182,10 @@ Love you forever.
 
 <style scoped>
 .messages-container {
+  width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .message-display {
@@ -193,18 +194,18 @@ Love you forever.
   gap: 1.5rem;
   background: white;
   border-radius: 16px;
-  padding: 2rem;
+  padding: 1.5rem;
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  margin-bottom: 2rem;
-  min-height: 500px;
+  margin-bottom: 1.5rem;
+  min-height: 300px;
 }
 
 .nav-arrow {
   background: #f8fafc;
   border: 2px solid #e2e8f0;
   border-radius: 50%;
-  width: 56px;
-  height: 56px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -212,7 +213,36 @@ Love you forever.
   transition: all 0.3s ease;
   color: #64748b;
   flex-shrink: 0;
-  margin-top: 2rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .messages-container {
+    padding: 2rem;
+  }
+
+  .message-display {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    min-height: 400px;
+  }
+
+  .nav-arrow {
+    width: 48px;
+    height: 48px;
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .message-display {
+    min-height: 500px;
+  }
+
+  .nav-arrow {
+    width: 56px;
+    height: 56px;
+  }
 }
 
 .nav-arrow:hover:not(.disabled) {
@@ -332,25 +362,44 @@ Love you forever.
   transform: scale(1.1);
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
+/* Additional responsive styles for small screens */
+@media (max-width: 767px) {
   .message-display {
     flex-direction: column;
-    padding: 1.5rem;
+    align-items: center;
   }
-  
+
   .nav-arrow {
     margin-top: 0;
+    margin-bottom: 1rem;
   }
-  
+
   .message-meta {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
   }
-  
+
   .message-text {
     font-size: 1rem;
+  }
+
+  .message-subject {
+    font-size: 1.25rem;
+  }
+
+  .message-header {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .message-body {
+    margin-bottom: 1rem;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
   }
 }
 </style>

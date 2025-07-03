@@ -1,15 +1,15 @@
 <template>
   <header>
     <nav class="flex flex-col p-4">
-      <h1 class="ml-auto text-5xl new-rocker-regular animate-old-school-wave"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Daneyshalee Vargas Matojo Oquendo!</a></h1>
+      <h1 class="ml-auto text-3xl md:text-4xl lg:text-5xl new-rocker-regular animate-old-school-wave text-center"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Daneyshalee Vargas Matojo Oquendo!</a></h1>
       <div class="relative m-auto">
         <img
             src="~/assets/images/kirby.png"
             alt="A happy Kirby"
-            class="absolute z-[-1] w-35 top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 -rotate-12 opacity-80"
+            class="hidden md:block absolute z-[-1] w-35 top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 -rotate-12 opacity-80"
         />
 
-        <ul class="mt-4 flex gap-4 text-4xl m-auto new-rocker-regular">
+        <ul class="mt-4 flex flex-col md:flex-row gap-2 md:gap-4 text-2xl md:text-3xl lg:text-4xl m-auto new-rocker-regular text-center">
           <li class="purple-shadow">
             <NuxtLink to="/">Home</NuxtLink>
           </li>
@@ -28,8 +28,9 @@
   </header>
   <body class="from-pink-400 bg-gradient-to-l via-purple-700 to-black">
   <main>
-    <div class="relative grid grid-cols-4">
-      <section id="left-sidebar" class="text-center mt-9">
+    <div class="relative grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 px-2">
+      <!-- Left sidebar - hidden on mobile, shown on tablet as smaller column, full size on desktop -->
+      <section id="left-sidebar" class="hidden md:block md:col-span-1 text-center mt-4 md:mt-9">
         <div class="relative">
           <a href="https://www.youtube.com/watch?v=TI4TJagzvEE"> <img
               src="~/assets/images/happy-birthday-gif-13.gif"
@@ -40,29 +41,33 @@
               @click="playFly"
               src="~/assets/images/shedinja.png"
               alt="A happy birthday"
-              class="absolute w-80 scale-x-[-1] left-70 top-120 animate-old-school-wave cursor-pointer"
+              class="absolute w-40 md:w-60 lg:w-80 scale-x-[-1] left-1/3 md:left-30 top-20 md:top-120 animate-old-school-wave cursor-pointer"
           />
           <audio ref="flyPlayer" src="/Fly.mp3" preload="auto"></audio>
           <a href="https://www.youtube.com/watch?v=pe5XD9Hyoj0">
           <img
               src="~/assets/images/gengar.png"
               alt="A happy birthday"
-              class="z-10 relative -top-161 w-64 rotate-20 left-10 mx-auto scale-x-[-1] purple-shadow-opposite gengar-laughing"
+              class="z-10 relative -top-20 md:-top-161 w-32 md:w-48 lg:w-64 rotate-20 left-5 md:left-10 mx-auto scale-x-[-1] purple-shadow-opposite gengar-laughing"
           /></a>
           <img
               @click="playShadowClaw"
               src="~/assets/images/mimikyu.png"
               alt="A happy birthday"
-              class="w-96 mimikyu-marching"
+              class="w-48 md:w-64 lg:w-96 mimikyu-marching"
           />
           <audio ref="shadowClawPlayer" src="/shadow-claw.mp3" preload="auto"></audio>
         </div>
       </section>
+
+      <!-- Main content - full width on mobile, 2/3 on tablet, 2/4 on desktop -->
       <section id="main-content"
-               class="col-span-2 mt-9 border-white border-8 border-double shadow-2xl bg-white/40 bg-[url('/assets/images/sleep-token-logo-4.png')] bg-no-repeat bg-contain bg-center text-xl rounded-xl">
+               class="col-span-1 md:col-span-2 lg:col-span-2 mt-4 md:mt-9 border-white border-4 md:border-8 border-double shadow-2xl bg-white/40 bg-[url('/assets/images/sleep-token-logo-4.png')] bg-no-repeat bg-contain bg-center text-base md:text-xl rounded-xl">
           <NuxtPage />
       </section>
-      <section id="right-sidebar" class="mt-9">
+
+      <!-- Right sidebar - hidden on mobile and tablet, shown on desktop -->
+      <section id="right-sidebar" class="hidden lg:block lg:col-span-1 mt-9">
         <div @click="togglePastSelf" class="z-0 relative">
           <audio ref="pastSelfPlayer" src="/past-self.opus" preload="auto" loop></audio>
           <div class="text-center pixelated-disc relative"
@@ -70,7 +75,7 @@
             <img
                 src="~/assets/images/snorlax.png"
                 alt="A happy snorlax"
-                class="z-[-1] absolute w-96 -top-1/7 left-3.5 rotate-370 purple-shadow-opposite"
+                class="z-[-1] absolute w-48 lg:w-96 -top-1/7 left-3.5 rotate-370 purple-shadow-opposite"
             />
           </div>
         </div>
@@ -86,29 +91,29 @@
             <img
                 src="~/assets/images/charmander.png"
                 alt="A happy Kirby"
-                class="z-[-1] absolute w-50 -top-2/4 left-3.5 rotate-350 purple-shadow"
+                class="z-[-1] absolute w-32 lg:w-50 -top-2/4 left-3.5 rotate-350 purple-shadow"
             />
           </div>
           <img
               src="~/assets/images/jigglypuff.png"
               alt="A happy Jigglypuff"
-              class="absolute w-52 top-4/4 right-0 -translate-x-1/2 purple-shadow-right gentle-dance"
+              class="absolute w-32 lg:w-52 top-4/4 right-0 -translate-x-1/2 purple-shadow-right gentle-dance"
           />
           <img
               src="~/assets/images/geodude.png"
               alt="A happy birthday"
-              class="relative w-80 right-50 top-60 scale-x-[-1]"
+              class="relative w-40 lg:w-80 right-1/4 lg:right-50 top-20 lg:top-60 scale-x-[-1]"
           />
         </div>
       </section>
     </div>
   </main>
   </body>
-  <footer class="absolute -bottom-70 left-0 w-full h-32 pointer-events-none overflow-hidden z-50">
+  <footer class="absolute -bottom-40 md:-bottom-70 left-0 w-full h-16 md:h-32 pointer-events-none overflow-hidden z-50">
     <img
         src="~/assets/images/running.gif"
         alt="Cute running creature"
-        class="absolute bottom-0 w-32 h-32 running-creature"
+        class="absolute bottom-0 w-16 h-16 md:w-32 md:h-32 running-creature"
     />
   </footer>
 </template>
@@ -362,8 +367,8 @@
 }
 
 .pixelated-spinning-disc {
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   background-image: url('/assets/images/sleep-dics.png');
   background-size: cover;
@@ -372,14 +377,42 @@
   animation: spin 3s linear infinite;
 }
 
+@media (min-width: 768px) {
+  .pixelated-spinning-disc {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pixelated-spinning-disc {
+    width: 400px;
+    height: 400px;
+  }
+}
+
 .pixelated-disc {
-  width: 14rem;
-  height: 14rem;
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
   background-image: url('/assets/images/sleep-dics.png');
   background-size: cover;
   image-rendering: pixelated;
   margin: 20px auto;
+}
+
+@media (min-width: 768px) {
+  .pixelated-disc {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pixelated-disc {
+    width: 14rem;
+    height: 14rem;
+  }
 }
 </style>
 <script setup lang="ts">
