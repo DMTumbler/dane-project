@@ -9,7 +9,7 @@
             class="absolute z-[-1] w-35 top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 -rotate-12 opacity-80"
         />
 
-        <ul class="mt-4 flex gap-4 text-3xl m-auto new-rocker-regular">
+        <ul class="mt-4 flex gap-4 text-4xl m-auto new-rocker-regular">
           <li class="purple-shadow">
             <NuxtLink to="/">Home</NuxtLink>
           </li>
@@ -20,10 +20,7 @@
             <NuxtLink to="spicy-gallery">Spicy Gallery</NuxtLink>
           </li>
           <li class="purple-shadow">
-            <NuxtLink to="/">Other Stuff</NuxtLink>
-          </li>
-          <li class="purple-shadow">
-            <NuxtLink to="/">Yet more Stuff</NuxtLink>
+            <NuxtLink to="good-shit">Delicious</NuxtLink>
           </li>
         </ul>
       </div>
@@ -31,13 +28,18 @@
   </header>
   <body class="from-pink-400 bg-gradient-to-l via-purple-700 to-black">
   <main>
-    <div class="relative grid grid-cols-3">
+    <div class="relative grid grid-cols-4">
       <section id="left-sidebar" class="text-center mt-9">
         <div class="relative">
           <img
               src="~/assets/images/happy-birthday-gif-13.gif"
               alt="A happy Jigglypuff"
               class="mx-auto relative z-20"
+          />
+          <img
+              src="~/assets/images/shedinja.png"
+              alt="A happy birthday"
+              class="absolute w-80 scale-x-[-1] left-70 top-120 animate-old-school-wave"
           />
           <img
               src="~/assets/images/gengar.png"
@@ -52,13 +54,8 @@
         </div>
       </section>
       <section id="main-content"
-               class="mt-9 border-white border-8 border-double shadow-2xl bg-white/40 bg-[url('/assets/images/sleep-token-logo-2.png')] bg-no-repeat bg-contain bg-center">
-          <NuxtPage class="absolute"/>
-          <img
-              src="~/assets/images/shedinja.png"
-              alt="A happy birthday"
-              class="relative w-80 top-210 right-50 scale-x-[-1] animate-old-school-wave"
-          />
+               class="col-span-2 mt-9 border-white border-8 border-double shadow-2xl bg-white/40 bg-[url('/assets/images/sleep-token-logo-2.png')] bg-no-repeat bg-contain bg-center text-xl">
+          <NuxtPage />
       </section>
       <section id="right-sidebar" class="mt-9">
         <div @click="togglePastSelf" class="z-0 relative">
@@ -91,6 +88,11 @@
               src="~/assets/images/jigglypuff.png"
               alt="A happy Jigglypuff"
               class="absolute w-52 top-4/4 right-0 -translate-x-1/2 purple-shadow-right"
+          />
+          <img
+              src="~/assets/images/geodude.png"
+              alt="A happy birthday"
+              class="relative w-80 right-50 scale-x-[-1]"
           />
         </div>
       </section>
