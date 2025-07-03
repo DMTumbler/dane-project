@@ -8,6 +8,7 @@ name: "index",
 
 <template>
   <div class="prose prose-lg max-w-none p-12">
+    <p class="mb-4 text-4xl font-semibold new-rocker-regular">My Gift to You</p>
     <p class="text-xl font-semibold">A website.</p>
 
     <p class="text-lg italic">Yes, a website.</p>

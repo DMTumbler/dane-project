@@ -31,26 +31,31 @@
     <div class="relative grid grid-cols-4">
       <section id="left-sidebar" class="text-center mt-9">
         <div class="relative">
-          <img
+          <a href="https://www.youtube.com/watch?v=TI4TJagzvEE"> <img
               src="~/assets/images/happy-birthday-gif-13.gif"
               alt="A happy Jigglypuff"
               class="mx-auto relative z-20"
-          />
+          /></a>
           <img
+              @click="playFly"
               src="~/assets/images/shedinja.png"
               alt="A happy birthday"
-              class="absolute w-80 scale-x-[-1] left-70 top-120 animate-old-school-wave"
+              class="absolute w-80 scale-x-[-1] left-70 top-120 animate-old-school-wave cursor-pointer"
           />
+          <audio ref="flyPlayer" src="/Fly.mp3" preload="auto"></audio>
+          <a href="https://www.youtube.com/watch?v=pe5XD9Hyoj0">
           <img
               src="~/assets/images/gengar.png"
               alt="A happy birthday"
               class="z-10 relative -top-161 w-64 rotate-20 left-10 mx-auto scale-x-[-1] purple-shadow-opposite gengar-laughing"
-          />
+          /></a>
           <img
+              @click="playShadowClaw"
               src="~/assets/images/mimikyu.png"
               alt="A happy birthday"
               class="w-96 mimikyu-marching"
           />
+          <audio ref="shadowClawPlayer" src="/shadow-claw.mp3" preload="auto"></audio>
         </div>
       </section>
       <section id="main-content"
@@ -92,7 +97,7 @@
           <img
               src="~/assets/images/geodude.png"
               alt="A happy birthday"
-              class="relative w-80 right-50 scale-x-[-1]"
+              class="relative w-80 right-50 top-60 scale-x-[-1]"
           />
         </div>
       </section>
@@ -383,10 +388,26 @@ import {ref} from 'vue';
 const pastSelfPlayer = ref<HTMLAudioElement | null>(null);
 const emergencePlayer = ref<HTMLAudioElement | null>(null);
 const damoclesPlayer = ref<HTMLAudioElement | null>(null);
+const flyPlayer = ref<HTMLAudioElement | null>(null);
+const shadowClawPlayer = ref<HTMLAudioElement | null>(null);
 
 const pastSelfSpinning = ref(false);
 const emergenceSpinning = ref(false);
 const damoclesSpinning = ref(false);
+
+function playFly() {
+  if (flyPlayer.value) {
+    flyPlayer.value.currentTime = 0;
+    flyPlayer.value.play().catch(e => console.error("Error playing Fly.mp3:", e));
+  }
+}
+
+function playShadowClaw() {
+  if (shadowClawPlayer.value) {
+    shadowClawPlayer.value.currentTime = 0;
+    shadowClawPlayer.value.play().catch(e => console.error("Error playing shadow-claw.mp3:", e));
+  }
+}
 
 function togglePastSelf() {
   pastSelfSpinning.value = !pastSelfSpinning.value;

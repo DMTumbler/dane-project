@@ -16,8 +16,10 @@ export default defineComponent({
       <img src="/assets/images/machamp.png" alt="Astarion" class="flex-1 max-w-sm">
       <img src="/assets/images/astarion-3.png" alt="Astarion" class="flex-1 max-w-sm">
       <img src="/assets/images/spirit.png" alt="Astarion" class="flex-1 max-w-sm">
-      <img src="/assets/images/nandor.png" alt="Astarion" class="flex-1 max-w-sm">
+      <a href="https://www.youtube.com/watch?v=Xu-3sTMy6sg"> <img src="/assets/images/nandor.png" alt="Astarion" class="flex-1 max-w-sm"></a>
       <img src="/assets/images/jackson.png" alt="Astarion" class="flex-1 max-w-sm">
+      <img src="/assets/images/mcqueen.png" alt="Astarion" class="flex-1 max-w-sm">
+      <img src="/assets/images/legoshi.png" alt="Astarion" class="flex-1 max-w-sm">
     </div>
   </div>
 </template>
