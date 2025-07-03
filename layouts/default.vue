@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav class="flex flex-col p-4">
-      <h1 class="ml-auto text-4xl new-rocker-regular animate-old-school-wave">Daneyshalee Vargas Matojo Oquendo!</h1>
+      <h1 class="ml-auto text-5xl new-rocker-regular animate-old-school-wave">Daneyshalee Vargas Matojo Oquendo!</h1>
       <div class="relative m-auto">
         <img
             src="~/assets/images/kirby.png"
@@ -29,19 +29,36 @@
       </div>
     </nav>
   </header>
-  <body class="bg-pink-300">
+  <body class="from-pink-400 bg-gradient-to-l via-purple-700 to-black">
   <main>
     <div class="relative grid grid-cols-3">
-      <img
-          src="~/assets/images/jigglypuff.png"
-          alt="A happy Jigglypuff"
-          class="absolute w-52 top-4/4 right-0 -translate-x-1/2 "
-      />
       <section id="left-sidebar" class="text-center mt-9">
-        <p>Test</p>
+        <div class="relative">
+          <img
+              src="~/assets/images/happy-birthday-gif-13.gif"
+              alt="A happy Jigglypuff"
+              class="mx-auto relative z-20"
+          />
+          <img
+              src="~/assets/images/gengar.png"
+              alt="A happy birthday"
+              class="z-10 relative -top-161 w-64 rotate-20 left-10 mx-auto scale-x-[-1] purple-shadow-opposite gengar-laughing"
+          />
+          <img
+              src="~/assets/images/mimikyu.png"
+              alt="A happy birthday"
+              class="w-96 mimikyu-marching"
+          />
+        </div>
       </section>
-      <section id="main-content" class="mt-9">
-        <NuxtPage/>
+      <section id="main-content"
+               class="mt-9 border-white border-8 border-double shadow-2xl bg-white/40 bg-[url('/assets/images/sleep-token-logo-2.png')] bg-no-repeat bg-contain bg-center">
+          <NuxtPage class="absolute"/>
+          <img
+              src="~/assets/images/shedinja.png"
+              alt="A happy birthday"
+              class="relative w-80 top-210 right-50 scale-x-[-1] animate-old-school-wave"
+          />
       </section>
       <section id="right-sidebar" class="mt-9">
         <div @click="togglePastSelf" class="z-0 relative">
@@ -51,7 +68,7 @@
             <img
                 src="~/assets/images/snorlax.png"
                 alt="A happy snorlax"
-                class="z-[-1] absolute w-96 -top-1/7 left-3.5 rotate-370"
+                class="z-[-1] absolute w-96 -top-1/7 left-3.5 rotate-370 purple-shadow-opposite"
             />
           </div>
         </div>
@@ -67,14 +84,26 @@
             <img
                 src="~/assets/images/charmander.png"
                 alt="A happy Kirby"
-                class="z-[-1] absolute w-50 -top-2/4 left-3.5 rotate-350"
+                class="z-[-1] absolute w-50 -top-2/4 left-3.5 rotate-350 purple-shadow"
             />
           </div>
+          <img
+              src="~/assets/images/jigglypuff.png"
+              alt="A happy Jigglypuff"
+              class="absolute w-52 top-4/4 right-0 -translate-x-1/2 purple-shadow-right"
+          />
         </div>
       </section>
     </div>
   </main>
   </body>
+  <footer class="absolute -bottom-70 left-0 w-full h-32 pointer-events-none overflow-hidden z-50">
+    <img
+        src="~/assets/images/running.gif"
+        alt="Cute running creature"
+        class="absolute bottom-0 w-32 h-32 running-creature"
+    />
+  </footer>
 </template>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
@@ -84,6 +113,159 @@
   font-weight: 400;
   font-style: normal;
 }
+@keyframes mimikyuMarch {
+  0%, 70% {
+    transform: translateX(0px) rotate(0deg);
+  }
+  71% {
+    transform: translateX(-5px) rotate(-2deg);
+  }
+  72% {
+    transform: translateX(-10px) rotate(2deg);
+  }
+  73% {
+    transform: translateX(-15px) rotate(-1deg);
+  }
+  74% {
+    transform: translateX(-20px) rotate(1deg);
+  }
+  75% {
+    transform: translateX(-25px) rotate(-2deg);
+  }
+  76% {
+    transform: translateX(-30px) rotate(2deg);
+  }
+  77% {
+    transform: translateX(-35px) rotate(-1deg);
+  }
+  78% {
+    transform: translateX(-40px) rotate(1deg);
+  }
+  79% {
+    transform: translateX(-45px) rotate(-2deg);
+  }
+  80% {
+    transform: translateX(-50px) rotate(2deg);
+  }
+  81% {
+    transform: translateX(-55px) rotate(-1deg);
+  }
+  82% {
+    transform: translateX(-60px) rotate(1deg);
+  }
+  83% {
+    transform: translateX(-65px) rotate(-2deg);
+  }
+  84% {
+    transform: translateX(-70px) rotate(2deg);
+  }
+  85% {
+    transform: translateX(-80px) rotate(-1deg);
+  }
+  86% {
+    transform: translateX(-90px) rotate(1deg);
+  }
+  87% {
+    transform: translateX(-300px) rotate(-2deg);
+  }
+  88% {
+    transform: translateX(-300px) rotate(2deg);
+  }
+  89% {
+    transform: translateX(-300px) rotate(-1deg);
+  }
+  90% {
+    transform: translateX(-300px) rotate(1deg);
+  }
+  91% {
+    transform: translateX(-300px) rotate(-1deg);
+  }
+  92% {
+    transform: translateX(-300px) rotate(1deg);
+  }
+  93% {
+    transform: translateX(-300px) rotate(-1deg);
+  }
+  94% {
+    transform: translateX(-300px) rotate(1deg);
+  }
+  95% {
+    transform: translateX(-300px) rotate(-1deg);
+  }
+  96% {
+    transform: translateX(-300px) rotate(1deg);
+  }
+  97% {
+    transform: translateX(-300px) rotate(-1deg);
+  }
+  98% {
+    transform: translateX(-300px) rotate(1deg);
+  }
+  99% {
+    transform: translateX(-300px) rotate(-1deg);
+  }
+  100% {
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+
+.mimikyu-marching {
+  animation: mimikyuMarch 18s ease-in-out infinite;
+}
+@keyframes gengarLaugh {
+  0%, 85% {
+    transform: translateY(0px) rotate(20deg) scale(-1, 1);
+  }
+  86% {
+    transform: translateY(-8px) rotate(18deg) scale(-1, 1);
+  }
+  87% {
+    transform: translateY(-12px) rotate(22deg) scale(-1, 1);
+  }
+  88% {
+    transform: translateY(-6px) rotate(19deg) scale(-1, 1);
+  }
+  89% {
+    transform: translateY(-10px) rotate(21deg) scale(-1, 1);
+  }
+  90% {
+    transform: translateY(-4px) rotate(20deg) scale(-1, 1);
+  }
+  91% {
+    transform: translateY(-8px) rotate(18deg) scale(-1, 1);
+  }
+  92% {
+    transform: translateY(-2px) rotate(22deg) scale(-1, 1);
+  }
+  93% {
+    transform: translateY(-6px) rotate(19deg) scale(-1, 1);
+  }
+  94% {
+    transform: translateY(-3px) rotate(21deg) scale(-1, 1);
+  }
+  95% {
+    transform: translateY(-5px) rotate(20deg) scale(-1, 1);
+  }
+  96% {
+    transform: translateY(-1px) rotate(19deg) scale(-1, 1);
+  }
+  97% {
+    transform: translateY(-3px) rotate(21deg) scale(-1, 1);
+  }
+  98% {
+    transform: translateY(-1px) rotate(20deg) scale(-1, 1);
+  }
+  99% {
+    transform: translateY(-2px) rotate(20deg) scale(-1, 1);
+  }
+  100% {
+    transform: translateY(0px) rotate(20deg) scale(-1, 1);
+  }
+}
+
+.gengar-laughing {
+  animation: gengarLaugh 12s ease-in-out infinite;
+}
 
 @keyframes oldSchoolWave {
   0%, 100% {
@@ -91,7 +273,7 @@
     text-shadow: 0 0 0 currentColor; /* No shadow */
   }
   25% {
-    transform: translateY(-1px) skewX(0.5deg);
+    transform: translateY(-3px) skewX(0.5deg);
     text-shadow: 1px 1px 2px rgba(255, 0, 255, 0.7);
   }
   50% {
@@ -99,13 +281,44 @@
     text-shadow: -1px -1px 2px rgba(0, 255, 255, 0.7);
   }
   75% {
-    transform: translateY(1px) skewX(0.2deg);
+    transform: translateY(3px) skewX(0.2deg);
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
   }
 }
 
+@keyframes runAcrossScreen {
+  0% {
+    right: -100px; /* Start off-screen on the right */
+  }
+  100% {
+    right: 100vw; /* End off-screen on the left */
+  }
+}
+
+.running-creature {
+  animation: runAcrossScreen 15s linear infinite;
+}
+
 .purple-shadow {
   transition: text-shadow 0.4s ease, transform 0.2s ease-in-out;
+}
+
+.purple-shadow-opposite {
+  transition: text-shadow 0.4s ease, transform 0.2s ease-in-out;
+}
+
+.purple-shadow-opposite:hover {
+  transform: translateY(9px) rotate(6deg);
+  text-shadow: 2px 2px 3px rgba(255, 0, 255, 0.7);
+}
+
+.purple-shadow-right {
+  transition: text-shadow 0.4s ease, transform 0.2s ease-in-out;
+}
+
+.purple-shadow-right:hover {
+  transform: translateX(9px) rotate(6deg);
+  text-shadow: 2px 2px 3px rgba(255, 0, 255, 0.7);
 }
 
 .purple-shadow:hover {
