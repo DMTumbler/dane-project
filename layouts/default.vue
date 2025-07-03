@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav class="flex flex-col p-4">
-      <h1 class="ml-auto text-5xl new-rocker-regular animate-old-school-wave">Daneyshalee Vargas Matojo Oquendo!</h1>
+      <h1 class="ml-auto text-5xl new-rocker-regular animate-old-school-wave"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Daneyshalee Vargas Matojo Oquendo!</a></h1>
       <div class="relative m-auto">
         <img
             src="~/assets/images/kirby.png"
@@ -54,7 +54,7 @@
         </div>
       </section>
       <section id="main-content"
-               class="col-span-2 mt-9 border-white border-8 border-double shadow-2xl bg-white/40 bg-[url('/assets/images/sleep-token-logo-2.png')] bg-no-repeat bg-contain bg-center text-xl">
+               class="col-span-2 mt-9 border-white border-8 border-double shadow-2xl bg-white/40 bg-[url('/assets/images/sleep-token-logo-4.png')] bg-no-repeat bg-contain bg-center text-xl rounded-xl">
           <NuxtPage />
       </section>
       <section id="right-sidebar" class="mt-9">
@@ -87,7 +87,7 @@
           <img
               src="~/assets/images/jigglypuff.png"
               alt="A happy Jigglypuff"
-              class="absolute w-52 top-4/4 right-0 -translate-x-1/2 purple-shadow-right"
+              class="absolute w-52 top-4/4 right-0 -translate-x-1/2 purple-shadow-right gentle-dance"
           />
           <img
               src="~/assets/images/geodude.png"
@@ -114,6 +114,21 @@
   font-family: "New Rocker", system-ui;
   font-weight: 400;
   font-style: normal;
+}
+@keyframes gentle-dance {
+  0%, 100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-8px) rotate(-2deg);
+  }
+  75% {
+    transform: translateX(8px) rotate(2deg);
+  }
+}
+
+.gentle-dance {
+  animation: gentle-dance 3s ease-in-out infinite;
 }
 @keyframes mimikyuMarch {
   0%, 70% {
