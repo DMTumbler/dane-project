@@ -22,6 +22,9 @@
           <li class="purple-shadow">
             <NuxtLink to="good-shit">Delicious</NuxtLink>
           </li>
+          <li class="purple-shadow md:hidden lg:hidden">
+            <NuxtLink to="mobile-snippets">Snippets</NuxtLink>
+          </li>
         </ul>
       </div>
     </nav>
